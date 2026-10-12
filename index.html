@@ -75,7 +75,7 @@ h2{font-family:var(--serif);font-size:clamp(1.7rem,3.6vw,2.4rem);margin:0 0 6px;
 .search{margin-left:auto;border:1.5px solid var(--gold);background:var(--paper);border-radius:999px;padding:8px 16px;min-width:220px;font:inherit}
 @media(max-width:620px){.search{margin-left:0;width:100%}}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
-.card{background:var(--paper);border:1px solid rgba(201,162,75,.55);border-radius:6px 6px 22px 6px;overflow:hidden;display:flex;flex-direction:column}
+.card{background:var(--paper);border:1px solid rgba(201,162,75,.55);border-radius:6px 6px 22px 6px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
 .card .pic{position:relative;aspect-ratio:1;background:var(--gold-soft);border:0;padding:0;display:block;width:100%}
 .card .pic img{width:100%;height:100%;object-fit:cover}
 .badge{position:absolute;top:10px;left:10px;background:var(--green);color:var(--gold-soft);border-radius:999px;padding:2px 10px;font-size:.82rem;font-weight:600}
@@ -98,6 +98,25 @@ h2{font-family:var(--serif);font-size:clamp(1.7rem,3.6vw,2.4rem);margin:0 0 6px;
 .msg{padding:28px;border:1.5px dashed var(--gold);border-radius:12px;background:var(--paper);text-align:center;grid-column:1/-1}
 .msg button{margin-top:10px}
 
+/* phone: 2 products per row */
+@media(max-width:700px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .skel{height:260px}
+  .card{border-radius:6px 6px 16px 6px}
+  .card .body{padding:10px 10px 12px;gap:4px}
+  .card h3{font-size:.98rem}
+  .card p{font-size:.85rem}
+  .type{font-size:.78rem}
+  .badge{top:6px;left:6px;padding:1px 8px;font-size:.72rem}
+  .price{gap:6px;flex-wrap:wrap}
+  .price strong{font-size:1.1rem}
+  .price s{font-size:.85rem}
+  .add{padding:8px 4px;font-size:.88rem}
+  .add i{margin-right:4px}
+  .card .step button{width:30px;height:30px;font-size:1rem}
+  .card .step span{font-size:.82rem}
+}
+
 /* how */
 .how{background:var(--paper);border-block:1px solid rgba(201,162,75,.5)}
 .how ol{margin:24px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s}
@@ -117,6 +136,8 @@ footer{background:var(--green-deep);color:var(--gold-soft);padding:44px 0 24px;b
 .ibtn:hover{background:var(--gold);color:var(--green-deep);transform:translateY(-3px)}
 .tag{margin:32px 0 0;text-align:center;font-family:var(--script);font-size:1.4rem;color:var(--gold)}
 .copy{text-align:center;opacity:.7;font-size:.85rem;margin:6px 0 0}
+.copy a{text-decoration:underline}
+.copy a:hover{color:#fff}
 @media(max-width:760px){.contact{grid-template-columns:1fr}}
 
 /* drawer */
@@ -157,12 +178,18 @@ form input.bad,form textarea.bad{border-color:var(--danger)}
 dialog{border:0;border-radius:6px 6px 26px 6px;padding:0;max-width:760px;width:calc(100% - 28px);background:var(--paper);border:2px solid var(--gold)}
 dialog::backdrop{background:rgba(10,53,36,.6)}
 .dlg{display:grid;grid-template-columns:1fr 1fr}
-.dlg img{width:100%;height:100%;min-height:280px;object-fit:cover;background:var(--gold-soft)}
+.dlg img{width:100%;height:100%;min-height:280px;object-fit:cover;background:var(--gold-soft);cursor:zoom-in}
 .dlg .info{padding:22px;display:flex;flex-direction:column;gap:8px;position:relative}
 .dlg .x{position:absolute;top:6px;right:12px;color:var(--green)}
 .dlg h3{font-family:var(--serif);font-size:1.5rem;margin:0;padding-right:28px}
 .dlg p{margin:0;color:var(--muted);white-space:pre-line}
 @media(max-width:620px){.dlg{grid-template-columns:1fr}.dlg img{min-height:220px;max-height:300px}}
+
+/* photo only viewer */
+#lbox{width:100vw;height:100vh;max-width:100vw;max-height:100vh;margin:0;padding:0;border:0;border-radius:0;background:#000;overflow:hidden}
+#lbox::backdrop{background:#000}
+#lbox img{width:100%;height:100%;object-fit:contain;cursor:default;background:#000}
+#lbox .lbx{position:fixed;top:max(12px,env(safe-area-inset-top));right:12px;width:44px;height:44px;border-radius:50%;border:2px solid var(--gold);background:rgba(10,53,36,.85);color:#fff;font-size:1.5rem;line-height:1;display:grid;place-items:center;z-index:2}
 
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
@@ -255,6 +282,7 @@ dialog::backdrop{background:rgba(10,53,36,.6)}
     </div>
     <p class="tag">Support handmade, support small business</p>
     <p class="copy">© <span id="yr"></span> RaiKrish's Collection</p>
+    <p class="copy"><a href="https://raikrishcolection.arnetworkhouse.in/POLICY/">Policy</a> &nbsp;|&nbsp; Associated with <a href="https://arnetworkhouse.in/" target="_blank" rel="noopener">AR Network House</a></p>
   </div>
 </footer>
 
@@ -267,7 +295,7 @@ dialog::backdrop{background:rgba(10,53,36,.6)}
     <div class="scroll" id="cartList"></div>
     <div class="foot">
       <div class="tot"><span>Subtotal</span><span id="subtotal">₹0</span></div>
-      <p class="note">Delivery charge and payment are confirmed with you on WhatsApp.</p>
+      <p class="note">Delivery charge and payment are confirmed with you on WhatsApp. (85 to 215)</p>
       <button class="btn solid" id="toCheckout">Continue to delivery details</button>
     </div>
   </div>
@@ -301,6 +329,12 @@ dialog::backdrop{background:rgba(10,53,36,.6)}
 <!-- product dialog -->
 <dialog id="pdlg" aria-label="Product details"><div class="dlg" id="pdlgBody"></div></dialog>
 
+<!-- photo only viewer -->
+<dialog id="lbox" aria-label="Photo">
+  <button class="lbx" id="lbClose" aria-label="Close photo">×</button>
+  <img id="lbImg" alt="">
+</dialog>
+
 <script>
 /* ====== SETTINGS ====== */
 const CONFIG = {
@@ -328,6 +362,22 @@ function loadCart() { try { return JSON.parse(localStorage.getItem('rk_cart') ||
 function saveCart() { try { localStorage.setItem('rk_cart', JSON.stringify(state.cart)); } catch (e) {} }
 
 const state = { products: [], byId: {}, type: 'All', q: '', cart: loadCart() };
+
+/* ====== BACK KEY SUPPORT ======
+   Every popup (cart, product, photo) adds one history entry, so the phone's
+   back key closes the top popup instead of leaving the website. */
+const layers = [];
+function pushLayer(id, closeFn) {
+  layers.push({ id, closeFn });
+  history.pushState({ rk: id }, '');
+}
+function dropLayer(id) {                  // close from a button: go "back" once
+  if (layers.length && layers[layers.length - 1].id === id) history.back();
+}
+window.addEventListener('popstate', () => {
+  const l = layers.pop();
+  if (l) l.closeFn();
+});
 
 /* ====== STATIC BITS ====== */
 document.querySelectorAll('.logo').forEach(i => { i.src = CONFIG.LOGO_URL; });
@@ -432,8 +482,15 @@ function pane(name) {
   ['Cart', 'Form', 'Done'].forEach(n => $('#pane' + n).classList.toggle('on', n === name));
   $('#dTitle').textContent = name === 'Cart' ? 'Your cart' : name === 'Form' ? 'Delivery details' : 'Order placed';
 }
-function openDrawer(p = 'Cart') { pane(p); $('#drawer').classList.add('on'); $('#veil').classList.add('on'); $('#drawer').setAttribute('aria-hidden', 'false'); }
-function closeDrawer() { $('#drawer').classList.remove('on'); $('#veil').classList.remove('on'); $('#drawer').setAttribute('aria-hidden', 'true'); }
+function hideDrawer() {
+  $('#drawer').classList.remove('on'); $('#veil').classList.remove('on'); $('#drawer').setAttribute('aria-hidden', 'true');
+}
+function openDrawer(p = 'Cart') {
+  pane(p);
+  if (!$('#drawer').classList.contains('on')) pushLayer('drawer', hideDrawer);
+  $('#drawer').classList.add('on'); $('#veil').classList.add('on'); $('#drawer').setAttribute('aria-hidden', 'false');
+}
+function closeDrawer() { dropLayer('drawer'); }
 $('#cartBtn').onclick = () => openDrawer('Cart');
 $('#closeDrawer').onclick = closeDrawer;
 $('#veil').onclick = closeDrawer;
@@ -446,7 +503,7 @@ function openProduct(id) {
   const p = state.byId[id]; if (!p) return;
   const d = pct(p);
   $('#pdlgBody').innerHTML = `
-    <img src="${esc(imgUrl(p.image))}" alt="${esc(p.name)}" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src=CONFIG.LOGO_URL">
+    <img src="${esc(imgUrl(p.image))}" alt="${esc(p.name)}" data-zoom title="Tap to view photo" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src=CONFIG.LOGO_URL">
     <div class="info">
       <button class="x" data-close-dlg aria-label="Close">×</button>
       ${p.type ? `<span class="type">${esc(p.type)}</span>` : ''}
@@ -456,8 +513,28 @@ function openProduct(id) {
       <div class="act" data-act="${esc(p.id)}">${actHTML(p.id)}</div>
     </div>`;
   $('#pdlg').showModal();
+  pushLayer('dlg', () => { if ($('#pdlg').open) $('#pdlg').close(); });
 }
-$('#pdlg').addEventListener('click', e => { if (e.target === e.currentTarget || e.target.closest('[data-close-dlg]')) e.currentTarget.close(); });
+$('#pdlg').addEventListener('click', e => {
+  if (e.target.closest('[data-zoom]')) { openPhoto(e.target.closest('[data-zoom]')); return; }
+  if (e.target === e.currentTarget || e.target.closest('[data-close-dlg]')) dropLayer('dlg');
+});
+$('#pdlg').addEventListener('close', () => dropLayer('dlg'));     // Esc key
+
+/* ====== PHOTO ONLY VIEWER ====== */
+function openPhoto(imgEl) {
+  const src = imgEl.getAttribute('src');
+  const big = src.replace('sz=w800', 'sz=w1600');
+  const lb = $('#lbImg');
+  lb.onerror = () => { lb.onerror = null; lb.src = src; };
+  lb.referrerPolicy = 'no-referrer';
+  lb.alt = imgEl.alt || '';
+  lb.src = big;
+  $('#lbox').showModal();
+  pushLayer('lb', () => { if ($('#lbox').open) $('#lbox').close(); });
+}
+$('#lbClose').onclick = () => dropLayer('lb');
+$('#lbox').addEventListener('close', () => dropLayer('lb'));      // Esc key
 
 /* ====== EVENTS ====== */
 document.addEventListener('click', e => {
