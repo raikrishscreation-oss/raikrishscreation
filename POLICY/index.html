@@ -1,1 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Policies | RàíKrísh's Collection</title>
+<meta name="description" content="Order, payment, shipping, cancellation, return, customization, privacy and other policies of RàíKrísh's Collection, an Indian handmade jewellery and handicraft store.">
+<meta name="theme-color" content="#0b3d29">
+<script>document.documentElement.className += ' js';</script>
+<!-- Optional icon font. The page works fully without it (icons are decorative). -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<style>
+:root{
+  --green-950:#072a1c;
+  --green-900:#0b3d29;
+  --green-700:#165a3d;
+  --green-200:#cfe3d6;
+  --green-100:#e6f0ea;
+  --cream:#fbf7ee;
+  --beige:#f1e9d6;
+  --beige-line:#e2d6b8;
+  --gold:#c9a24b;
+  --gold-text:#7a5c14;
+  --ink:#1d2a23;
+  --muted:#46544b;
+  --white:#ffffff;
+  --font-body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-head:Georgia,"Times New Roman",serif;
+  --space-1:.5rem; --space-2:1rem; --space-3:1.5rem; --space-4:2.25rem; --space-5:3.5rem;
+  --radius:14px; --radius-sm:9px;
+  --shadow-sm:0 1px 3px rgba(11,61,41,.10);
+  --shadow-md:0 10px 28px rgba(11,61,41,.14);
+  --header-h:68px;
+  --maxw:1180px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--font-body);font-size:1.0625rem;line-height:1.7;overflow-x:hidden}
+body.menu-open{overflow:hidden}
+img{max-width:100%;height:auto}
+a{color:var(--green-700);text-underline-offset:3px}
+a:hover{color:var(--green-900)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:0;background:var(--green-900);color:#fff;padding:.7rem 1rem;z-index:100}
+.skip:focus{left:var(--space-1);top:var(--space-1)}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 var(--space-2)}
 
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:var(--green-900);color:#fff;box-shadow:0 2px 12px rgba(0,0,0,.18)}
+.header-in{display:flex;align-items:center;justify-content:space-between;gap:var(--space-2);min-height:var(--header-h)}
+.brand{display:flex;align-items:center;gap:.75rem;color:#fff;text-decoration:none;min-width:0}
+.brand:hover{color:#fff}
+.brand-mark{flex:none;width:46px;height:46px;border-radius:50%;object-fit:cover;background:var(--cream);border:2px solid var(--gold);display:block}
+.brand-fallback{flex:none;width:46px;height:46px;border-radius:50%;display:none;align-items:center;justify-content:center;background:var(--cream);color:var(--green-900);border:2px solid var(--gold);font-family:var(--font-head);font-weight:700;font-size:1.05rem}
+.brand-text{display:flex;flex-direction:column;line-height:1.2;min-width:0}
+.brand-name{font-family:var(--font-head);font-size:1.15rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand-tag{font-size:.78rem;color:var(--gold)}
+.top-links{display:none;gap:.25rem;align-items:center}
+.top-links a{color:#fff;text-decoration:none;padding:.5rem .85rem;border-radius:999px;font-size:.95rem;transition:background .2s}
+.top-links a:hover{background:rgba(255,255,255,.14);color:#fff}
+.menu-btn{display:none;align-items:center;gap:.5rem;background:var(--gold);color:var(--green-950);border:0;border-radius:999px;padding:.6rem 1.05rem;font:inherit;font-weight:600;font-size:.95rem;cursor:pointer;transition:transform .15s,background .2s}
+.menu-btn:hover{background:#d8b358}
+.menu-btn:active{transform:scale(.97)}
+.js .menu-btn{display:inline-flex}
+
+/* Hero */
+.hero{background:radial-gradient(circle at 85% 20%,rgba(201,162,75,.20),transparent 45%),linear-gradient(160deg,var(--green-900),var(--green-950));color:#fff;padding:var(--space-5) 0 var(--space-4);text-align:center}
+.eyebrow{display:inline-block;color:var(--gold);font-size:.95rem;letter-spacing:.04em;margin-bottom:.5rem}
+.hero h1{font-family:var(--font-head);font-size:clamp(2.1rem,6vw,3.4rem);line-height:1.15;margin:.1rem 0 .6rem}
+.hero .lead{font-size:clamp(1.05rem,2.6vw,1.3rem);margin:0 auto .6rem;max-width:40rem;color:#f1ead8}
+.hero .desc{margin:0 auto var(--space-3);max-width:42rem;color:#d3e3d9;font-size:1rem}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin:0;padding:0;list-style:none}
+.chips li{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.10);border:1px solid rgba(201,162,75,.55);padding:.45rem .9rem;border-radius:999px;font-size:.9rem}
+.chips i{color:var(--gold)}
+.updated{margin:var(--space-3) 0 0;font-size:.9rem;color:#c3d6ca}
+
+/* Delivery banner */
+.banner{background:var(--beige);border-bottom:1px solid var(--beige-line)}
+.banner p{margin:0;padding:var(--space-2) 0;font-size:.98rem;text-align:center}
+.banner i{color:var(--gold-text);margin-right:.4rem}
+
+/* Layout */
+.layout{display:grid;grid-template-columns:1fr;gap:var(--space-3);padding:var(--space-4) 0 var(--space-5)}
+.sidebar{min-width:0}
+.policy-nav h2{font-family:var(--font-head);font-size:1.1rem;margin:0 0 var(--space-1);color:var(--green-900)}
+.policy-nav ol{list-style:none;margin:0;padding:0;display:grid;gap:.25rem}
+.policy-nav a{display:flex;align-items:center;gap:.7rem;padding:.6rem .8rem;border-radius:var(--radius-sm);color:var(--ink);text-decoration:none;font-size:.97rem;line-height:1.35;border:1px solid transparent;transition:background .2s,border-color .2s,transform .15s}
+.policy-nav a .ico{flex:none;width:1.6rem;text-align:center;color:var(--green-700)}
+.policy-nav a:hover{background:var(--green-100);color:var(--green-900)}
+.policy-nav a:active{transform:translateX(2px)}
+.policy-nav a[aria-current="page"]{background:var(--green-900);color:#fff;font-weight:600;border-color:var(--gold)}
+.policy-nav a[aria-current="page"] .ico{color:var(--gold)}
+
+/* Content */
+.content{min-width:0;scroll-margin-top:calc(var(--header-h) + 12px)}
+.policy{background:var(--white);border:1px solid var(--beige-line);border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:var(--space-3);margin-bottom:var(--space-4);scroll-margin-top:calc(var(--header-h) + 12px);counter-reset:clause}
+.js .policy{display:none;margin-bottom:0}
+.js .policy.active{display:block;animation:fadeIn .35s ease both}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.policy-head{border-bottom:2px solid var(--gold);padding-bottom:var(--space-2);margin-bottom:var(--space-3)}
+.policy-head .kicker{margin:0;color:var(--gold-text);font-size:.9rem;font-weight:600}
+.policy h2{font-family:var(--font-head);font-size:clamp(1.7rem,4.5vw,2.3rem);line-height:1.2;margin:.2rem 0 0;color:var(--green-900);outline:none}
+.policy h3{counter-increment:clause;font-family:var(--font-head);font-size:1.2rem;line-height:1.35;margin:var(--space-3) 0 .35rem;color:var(--green-900);display:flex;gap:.65rem;align-items:baseline}
+.policy h3::before{content:counter(clause) ".";flex:none;color:var(--gold-text);font-weight:700;min-width:1.7rem}
+.policy h3.plain::before{content:none}
+.policy p{margin:0 0 .9rem;max-width:68ch}
+.policy ul,.policy ol.list{margin:0 0 1rem;padding-left:1.4rem;max-width:68ch}
+.policy li{margin-bottom:.4rem}
+.policy li::marker{color:var(--gold-text)}
+.indent{padding-left:2.35rem}
+.indent p,.indent ul,.indent ol{max-width:66ch}
+
+/* Info boxes */
+.note{display:flex;gap:.85rem;align-items:flex-start;background:var(--green-100);border:1px solid var(--green-200);border-left:5px solid var(--green-700);border-radius:var(--radius-sm);padding:var(--space-2);margin:var(--space-2) 0 var(--space-3);max-width:70ch}
+.note>i{flex:none;margin-top:.2rem;color:var(--green-700);font-size:1.15rem;width:1.3rem;text-align:center}
+.note strong{display:block;color:var(--green-900);margin-bottom:.15rem}
+.note p{margin:0 0 .4rem}
+.note p:last-child{margin-bottom:0}
+.note.gold{background:#fbf3df;border-color:var(--beige-line);border-left-color:var(--gold)}
+.note.gold>i{color:var(--gold-text)}
+.ph{background:#fff1c2;border:1px dashed #b38a1c;border-radius:5px;padding:0 .35rem;font-weight:600;color:#5a4208;word-break:break-word}
+
+/* Table */
+.table-wrap{overflow-x:auto;margin:var(--space-2) 0;border:1px solid var(--beige-line);border-radius:var(--radius-sm);max-width:70ch}
+table{border-collapse:collapse;width:100%;min-width:320px;font-size:.98rem}
+caption{caption-side:top;text-align:left;padding:.75rem 1rem;font-weight:700;color:var(--green-900);background:var(--beige)}
+th,td{padding:.65rem 1rem;text-align:left;border-top:1px solid var(--beige-line)}
+td:last-child,th:last-child{text-align:right;white-space:nowrap}
+tr.total td,tr.total th{background:var(--green-100);font-weight:700}
+tr.hl td,tr.hl th{background:#fbf3df;font-weight:600}
+
+/* Contact cards */
+.contact-grid{display:grid;grid-template-columns:1fr;gap:var(--space-2);margin:var(--space-2) 0 var(--space-3)}
+.contact-card{display:flex;gap:.85rem;align-items:flex-start;background:var(--cream);border:1px solid var(--beige-line);border-radius:var(--radius-sm);padding:var(--space-2)}
+.contact-card>i{flex:none;width:2.4rem;height:2.4rem;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--green-900);color:var(--gold)}
+.contact-card strong{display:block;color:var(--green-900)}
+.contact-card span,.contact-card a{word-break:break-word}
+
+/* Pager */
+.pager{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-1);margin-top:var(--space-4);padding-top:var(--space-2);border-top:1px solid var(--beige-line)}
+.pager a{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:999px;background:var(--green-100);color:var(--green-900);text-decoration:none;font-weight:600;font-size:.95rem;transition:background .2s,transform .15s}
+.pager a:hover{background:var(--green-200)}
+.pager a:active{transform:scale(.98)}
+.pager .next{margin-left:auto}
+
+/* Footer */
+.site-footer{background:var(--green-950);color:#d9e7de;padding:var(--space-5) 0 var(--space-3)}
+.foot-grid{display:grid;grid-template-columns:1fr;gap:var(--space-4)}
+.site-footer h2{font-family:var(--font-head);color:var(--gold);font-size:1.05rem;margin:0 0 .6rem}
+.site-footer a{color:#e9f1ec;text-decoration:none}
+.site-footer a:hover{color:var(--gold);text-decoration:underline}
+.site-footer ul{list-style:none;margin:0;padding:0}
+.site-footer li{margin:.3rem 0}
+.foot-brand{font-family:var(--font-head);font-size:1.3rem;color:#fff;margin:0 0 .4rem}
+.foot-desc{margin:0 0 .75rem;max-width:34rem;font-size:.97rem}
+.foot-contact li{display:flex;gap:.65rem;align-items:flex-start}
+.foot-contact i{flex:none;width:1.3rem;text-align:center;color:var(--gold);margin-top:.35rem}
+.foot-contact span,.foot-contact a{word-break:break-word}
+.foot-bottom{margin-top:var(--space-4);padding-top:var(--space-2);border-top:1px solid rgba(255,255,255,.16);display:flex;flex-direction:column;gap:.35rem;font-size:.92rem}
+.foot-bottom p{margin:0}
+.foot-note{color:var(--gold)}
+
+/* Back to top */
+.to-top{position:fixed;right:1rem;bottom:1rem;width:48px;height:48px;border-radius:50%;border:2px solid var(--gold);background:var(--green-900);color:#fff;font-size:1.1rem;cursor:pointer;box-shadow:var(--shadow-md);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .25s,transform .25s,visibility .25s,background .2s;z-index:40}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top:hover{background:var(--green-700)}
+
+/* Mobile menu panel */
+@media (max-width:959px){
+  .js .sidebar{display:none;position:fixed;left:0;right:0;top:var(--header-h);bottom:0;background:var(--cream);z-index:45;overflow-y:auto;padding:var(--space-2);border-top:3px solid var(--gold)}
+  body.menu-open .sidebar{display:block}
+  .policy-nav a{padding:.8rem .9rem}
+  .indent{padding-left:0}
+}
+@media (min-width:640px){
+  .contact-grid{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1.4fr 1fr 1fr}
+  .foot-bottom{flex-direction:row;justify-content:space-between;flex-wrap:wrap}
+  .policy{padding:var(--space-4)}
+}
+@media (min-width:960px){
+  .top-links{display:flex}
+  .js .menu-btn{display:none}
+  .layout{grid-template-columns:300px minmax(0,1fr);gap:var(--space-4)}
+  .sidebar{position:sticky;top:calc(var(--header-h) + 16px);align-self:start;max-height:calc(100vh - var(--header-h) - 32px);overflow-y:auto;background:var(--white);border:1px solid var(--beige-line);border-radius:var(--radius);padding:var(--space-2);box-shadow:var(--shadow-sm)}
+  .foot-grid{grid-template-columns:1.5fr 1fr 1fr 1fr}
+}
+@media (max-width:380px){
+  .brand-tag{display:none}
+  .brand-name{font-size:1rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+@media print{
+  .site-header,.sidebar,.to-top,.pager,.site-footer{display:none!important}
+  .js .policy{display:block!important}
+  .policy{box-shadow:none;border:0;page-break-after:always}
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#content">Skip to policy content</a>
+
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="brand" href="#about" aria-label="RàíKrísh's Collection – policies home">
+      <img class="brand-mark" id="brandLogo" src="https://drive.google.com/thumbnail?id=1zqOu2NPiGQ4MZT6rxNwbzn_7csTxUQpD&amp;sz=s200" alt="RàíKrísh's Collection logo" width="46" height="46" referrerpolicy="no-referrer">
+      <span class="brand-fallback" id="brandFallback" aria-hidden="true">RK</span>
+      <span class="brand-text">
+        <span class="brand-name">RàíKrísh's Collection</span>
+        <span class="brand-tag">Handmade with Love</span>
+      </span>
+    </a>
+    <nav class="top-links" aria-label="Main">
+      <a href="https://raikrishcolection.arnetworkhouse.in/"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> Shop</a>
+      <a href="#about">Policies</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="sidebar" aria-label="Open policy menu">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i><span>Policies</span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="wrap">
+      <span class="eyebrow">Handmade with Love</span>
+      <h1 id="heroTitle">Our Policies</h1>
+      <p class="lead">Clear, transparent, and customer-friendly policies for a better shopping experience.</p>
+      <p class="desc">Here you can read how we handle ordering, payment, shipping, cancellation, returns, customized products, privacy, and product care at RàíKrísh's Collection. Please read the relevant policies before you place an order.</p>
+      <ul class="chips" aria-label="Key points">
+        <li><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Orders confirmed on WhatsApp</li>
+        <li><i class="fa-solid fa-credit-card" aria-hidden="true"></i> Online payment only</li>
+        <li><i class="fa-solid fa-truck" aria-hidden="true"></i> Shipped by India Post</li>
+        <li><i class="fa-solid fa-user-check" aria-hidden="true"></i> No app login needed</li>
+      </ul>
+      <p class="updated">Last updated: <span class="ph">[DD Month YYYY]</span></p>
+    </div>
+  </section>
+
+  <div class="banner">
+    <div class="wrap">
+      <p><i class="fa-solid fa-circle-info" aria-hidden="true"></i><strong>All applicable delivery charges must be paid by the customer. Delivery charges are separate from product prices and will be communicated before order confirmation. Full payment, including delivery charges, is required before dispatch.</strong></p>
+    </div>
+  </div>
+
+  <div class="wrap layout">
+    <aside class="sidebar" id="sidebar" aria-label="Policy menu">
+      <nav class="policy-nav" aria-label="Policy pages">
+        <h2>Policy pages</h2>
+        <ol>
+          <li><a href="#about"><i class="fa-solid fa-feather-pointed ico" aria-hidden="true"></i><span>About Us</span></a></li>
+          <li><a href="#order"><i class="fa-brands fa-whatsapp ico" aria-hidden="true"></i><span>Order Policy</span></a></li>
+          <li><a href="#payment"><i class="fa-solid fa-credit-card ico" aria-hidden="true"></i><span>Payment Policy</span></a></li>
+          <li><a href="#shipping"><i class="fa-solid fa-truck ico" aria-hidden="true"></i><span>Shipping &amp; Delivery Policy</span></a></li>
+          <li><a href="#cancellation"><i class="fa-solid fa-ban ico" aria-hidden="true"></i><span>Cancellation Policy</span></a></li>
+          <li><a href="#returns"><i class="fa-solid fa-rotate-left ico" aria-hidden="true"></i><span>Return &amp; Refund Policy</span></a></li>
+          <li><a href="#customized"><i class="fa-solid fa-wand-magic-sparkles ico" aria-hidden="true"></i><span>Customized Product Policy</span></a></li>
+          <li><a href="#privacy"><i class="fa-solid fa-lock ico" aria-hidden="true"></i><span>Privacy Policy</span></a></li>
+          <li><a href="#terms"><i class="fa-solid fa-file-contract ico" aria-hidden="true"></i><span>Terms &amp; Conditions</span></a></li>
+          <li><a href="#handmade"><i class="fa-solid fa-hand-holding-heart ico" aria-hidden="true"></i><span>Handmade Product Disclaimer</span></a></li>
+          <li><a href="#care"><i class="fa-solid fa-gem ico" aria-hidden="true"></i><span>Product Care Policy</span></a></li>
+          <li><a href="#contact"><i class="fa-solid fa-headset ico" aria-hidden="true"></i><span>Contact &amp; Complaint Policy</span></a></li>
+        </ol>
+      </nav>
+    </aside>
+
+    <div class="content" id="content">
+
+<!-- ============ 1. ABOUT US ============ -->
+<article class="policy" id="about" data-title="About Us">
+  <header class="policy-head">
+    <p class="kicker">Page 1 of 12</p>
+    <h2 tabindex="-1">About Us</h2>
+  </header>
+
+  <h3>Who we are</h3>
+  <p>RàíKrísh's Collection is an Indian online store for handmade jewellery and handcrafted accessories. Our range includes handmade jewellery, clay jewellery, handmade hair clips and hairpins, handmade lockets, floral-inspired accessories, and other handcrafted decorative and fashion pieces.</p>
+
+  <h3>What we care about</h3>
+  <ul>
+    <li><strong>Creativity:</strong> we enjoy designing pieces that feel fresh, personal, and expressive.</li>
+    <li><strong>Handmade craftsmanship:</strong> our products are made by hand, not mass-produced.</li>
+    <li><strong>Individual character:</strong> because each piece is handmade, each one has its own character.</li>
+    <li><strong>Thoughtful presentation:</strong> we aim to pack and present every order with care.</li>
+    <li><strong>Customer satisfaction:</strong> we want you to feel confident and happy with what you receive.</li>
+    <li><strong>Transparent ordering and payment:</strong> you will know the price, the delivery charges, and the total before you confirm your order.</li>
+  </ul>
+
+  <h3>How ordering works</h3>
+  <p>You can order through Instagram, WhatsApp, or our official website. Every order is confirmed with you on WhatsApp before it is processed. Payment is made online, and orders are shipped through India Post. You do not need to create an account or log in to a separate application to place an order.</p>
+
+  <h3>Customized products</h3>
+  <p>We accept requests for customized handmade products. Customized orders follow a few extra steps, including an advance payment, which are explained in our <a href="#customized">Customized Product Policy</a>.</p>
+
+  <h3>Questions?</h3>
+  <p>If you need help or have a question about a policy, please reach us through the channels on our <a href="#contact">Contact &amp; Complaint Policy</a> page.</p>
+</article>
+
+<!-- ============ 2. ORDER POLICY ============ -->
+<article class="policy" id="order" data-title="Order Policy">
+  <header class="policy-head">
+    <p class="kicker">Page 2 of 12</p>
+    <h2 tabindex="-1">Order Policy</h2>
+  </header>
+
+  <aside class="note">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    <div><strong>Every order is confirmed on WhatsApp</strong>
+    <p>Whether you reach us through Instagram, WhatsApp, or the website, your order is not confirmed until you receive confirmation from us on WhatsApp.</p></div>
+  </aside>
+
+  <h3>Where you can order</h3>
+  <p>Orders are accepted through Instagram, WhatsApp, and our official website.</p>
+
+  <h3>WhatsApp confirmation is required</h3>
+  <p>Every order must be confirmed through WhatsApp before it is processed. Sending an Instagram message or submitting an order request on the website does not by itself confirm an order. We treat an order as confirmed only after WhatsApp confirmation has been exchanged between you and us.</p>
+
+  <h3>Information you must give us</h3>
+  <p>To process and deliver your order, please give us accurate details:</p>
+  <ul>
+    <li>Your name and an active contact number</li>
+    <li>Your complete delivery address and PIN code</li>
+    <li>Any other information reasonably needed for delivery</li>
+  </ul>
+  <p>We are not responsible for problems that arise from incorrect or incomplete details provided by the customer.</p>
+
+  <h3>Please review before you confirm</h3>
+  <p>Before you confirm an order, please check the product name, quantity, customization details (if any), product price, delivery charges, and the total payable amount. Once you confirm, we will process the order on the basis of those details.</p>
+
+  <h3>Product availability</h3>
+  <p>Our products are handmade and stock may be limited. We verify availability before accepting an order. If an item is not available, we will let you know on WhatsApp.</p>
+
+  <h3>Customized products</h3>
+  <p>Customized products are prepared according to the specifications agreed between you and us. Production begins only after the specifications are confirmed and the required advance payment is received and verified. Please see the <a href="#customized">Customized Product Policy</a> for details.</p>
+
+  <h3>When an order is processed</h3>
+  <p>An order is processed for dispatch only after order confirmation on WhatsApp and payment verification are complete. Payment requirements are described in the <a href="#payment">Payment Policy</a>, and delivery in the <a href="#shipping">Shipping &amp; Delivery Policy</a>.</p>
+
+  <h3>No account or login</h3>
+  <p>You do not need to create an account or log in to a separate application to place an order.</p>
+</article>
+
+<!-- ============ 3. PAYMENT POLICY ============ -->
+<article class="policy" id="payment" data-title="Payment Policy">
+  <header class="policy-head">
+    <p class="kicker">Page 3 of 12</p>
+    <h2 tabindex="-1">Payment Policy</h2>
+  </header>
+
+  <aside class="note">
+    <i class="fa-solid fa-credit-card" aria-hidden="true"></i>
+    <div><strong>Online payment only. No Cash on Delivery.</strong>
+    <p>Full payment, including delivery charges, is required before dispatch.</p></div>
+  </aside>
+  <aside class="note gold">
+    <i class="fa-solid fa-truck" aria-hidden="true"></i>
+    <div><strong>Delivery charges</strong>
+    <p>All applicable delivery charges must be paid by the customer. Delivery charges are separate from product prices and will be communicated before order confirmation. Full payment, including delivery charges, is required before dispatch.</p></div>
+  </aside>
+
+  <h3>Online payment is mandatory</h3>
+  <p>All orders must be paid for online. Cash on Delivery (COD) is not available.</p>
+
+  <h3>Bill or invoice and payment QR code</h3>
+  <p>We will provide you with a bill or invoice for your order. The payment QR code will be provided or mentioned on that bill or invoice. Please do not pay to any QR code or account that does not come from our official bill or invoice, or from our confirmed WhatsApp conversation with you.</p>
+  <p>Please check the name of the payment recipient shown in your payment app before you complete a payment.</p>
+
+  <h3>What the bill or invoice will show</h3>
+  <p>Your bill or invoice will show these items separately:</p>
+  <ul>
+    <li>Product price</li>
+    <li>Customization charges, if any apply to your order</li>
+    <li>India Post delivery charges</li>
+    <li>Any other applicable charges</li>
+    <li>The final total payable amount</li>
+  </ul>
+
+  <h3>Delivery charges are paid by the customer</h3>
+  <p>The customer pays the applicable India Post delivery charges. These are separate from the product price unless an offer explicitly states otherwise. We do not offer free delivery unless we announce a free-shipping offer. Delivery charges depend on the specific order and will be told to you before you confirm.</p>
+
+  <h3>Payment before dispatch</h3>
+  <p>The complete payable amount, including delivery charges, must be paid before dispatch begins. We dispatch an order only after we have verified that the payment has been received.</p>
+
+  <h3>Payment verification</h3>
+  <p>A payment screenshot alone is not final proof of payment. We confirm payment by verifying that the money has actually been received. If you have paid but we have not yet confirmed it, please message us on WhatsApp with your payment reference so we can check.</p>
+
+  <h3>Customized products: 50% advance</h3>
+  <p>For customized products, you must pay 50% of the agreed product price in advance. Production begins only after this advance has been received and verified and the customization details have been confirmed.</p>
+  <p>The 50% advance is part of the agreed product price. It is not an additional charge.</p>
+
+  <h3>Remaining payment for customized products</h3>
+  <p>The remaining 50% of the agreed product price, together with the applicable delivery charges, must be paid before dispatch.</p>
+
+  <h3>Illustrative example</h3>
+  <p>An example with figures is given in the <a href="#customized">Customized Product Policy</a>. It is for illustration only; actual prices and delivery charges depend on your order.</p>
+
+  <h3>How payments are handled</h3>
+  <p>Payment is arranged through the bill or invoice and the WhatsApp conversation for your order. This website does not process payments and does not ask you to enter card, bank, or UPI details.</p>
+</article>
+
+<!-- ============ 4. SHIPPING ============ -->
+<article class="policy" id="shipping" data-title="Shipping &amp; Delivery Policy">
+  <header class="policy-head">
+    <p class="kicker">Page 4 of 12</p>
+    <h2 tabindex="-1">Shipping &amp; Delivery Policy</h2>
+  </header>
+
+  <aside class="note gold">
+    <i class="fa-solid fa-truck" aria-hidden="true"></i>
+    <div><strong>Please note</strong>
+    <p>Shipping is handled through India Post, and all applicable delivery charges are payable by the customer. Delivery charges will be communicated before order confirmation and must be paid in full before dispatch.</p></div>
+  </aside>
+
+  <h3>Shipping partner</h3>
+  <p>All orders are shipped through India Post.</p>
+
+  <h3>Delivery charges</h3>
+  <p>The customer is responsible for paying all applicable delivery charges. Delivery charges are separate from product prices unless an offer explicitly states otherwise, and they are shown separately on the bill or invoice. We will tell you the delivery charges before you confirm your order. We do not promise free shipping unless we announce a free-shipping offer.</p>
+
+  <h3>Payment before dispatch</h3>
+  <p>The complete payable amount, including delivery charges, must be paid before dispatch begins. We dispatch orders only after payment has been verified. For customized products, the remaining product balance and delivery charges must be paid before dispatch.</p>
+
+  <h3>Your delivery details</h3>
+  <p>Please give us an accurate delivery address, PIN code, and an active contact number. Postal staff may need to reach you, and incorrect details can cause delay, return, or non-delivery.</p>
+
+  <h3>Dispatch time and delivery time are different</h3>
+  <p><strong>Dispatch time</strong> is the time we need to prepare your order and hand it over to India Post. <strong>Delivery time</strong> is the time India Post takes to carry the parcel to your address. We will share an estimated dispatch or delivery period only when we reasonably know it. We do not guarantee any specific dispatch or delivery date.</p>
+
+  <h3>What can affect delivery</h3>
+  <p>Actual delivery time may depend on your destination, postal service operations, weather, holidays, and other circumstances beyond our control.</p>
+
+  <h3>Tracking</h3>
+  <p>We will share a tracking number with you whenever one is available for your shipment.</p>
+
+  <h3>Delayed, returned, or undelivered shipments</h3>
+  <p>If your shipment is delayed, returned to us, or marked undelivered, please message us on WhatsApp with your order details and tracking number (if you have one). We will give reasonable help in tracking the shipment and resolving the delivery issue with India Post.</p>
+  <p>If a parcel comes back because of an incorrect or incomplete address or because the recipient could not be reached, we will discuss the options with you. Re-sending the parcel may need fresh delivery charges in that case.</p>
+
+  <h3>Lost, damaged, or not-delivered orders</h3>
+  <p>We do not accept responsibility for every delay caused by India Post, but we will not simply deny your rights if a parcel is lost, damaged, or not delivered. We will review each case fairly and, where appropriate, offer a suitable remedy as explained in the <a href="#returns">Return &amp; Refund Policy</a>. Your rights under applicable consumer law are not affected.</p>
+</article>
+
+<!-- ============ 5. CANCELLATION ============ -->
+<article class="policy" id="cancellation" data-title="Cancellation Policy">
+  <header class="policy-head">
+    <p class="kicker">Page 5 of 12</p>
+    <h2 tabindex="-1">Cancellation Policy</h2>
+  </header>
+
+  <aside class="note gold">
+    <i class="fa-solid fa-ban" aria-hidden="true"></i>
+    <div><strong>In short</strong>
+    <p>Ordinary cancellation is not available once dispatch begins. After customized production begins, cancellation because of a change of mind will ordinarily not be accepted. Your legal consumer rights remain protected.</p></div>
+  </aside>
+
+  <h3>How to request cancellation</h3>
+  <p>Please send your cancellation request to us on WhatsApp. Include your name and order details so we can find your order quickly.</p>
+
+  <h3>Check before you confirm</h3>
+  <p>Please review the product details, customization specifications, delivery address, product price, and delivery charges carefully before you confirm an order. This helps avoid the need for cancellation.</p>
+
+  <h3>The three stages</h3>
+  <p>What we can do depends on the stage your order has reached.</p>
+
+  <h3 class="plain">A. Before production or dispatch begins</h3>
+  <div class="indent">
+    <p>We may consider a cancellation request made before dispatch begins. For a customized product, this includes requests made before production begins. If we approve the cancellation, we will refund the amount you paid for the cancelled order, after verification.</p>
+  </div>
+
+  <h3 class="plain">B. After customized production begins</h3>
+  <div class="indent">
+    <p>Customized production begins only after we have received and verified the 50% advance and the customization specifications have been confirmed. Once production has begun, a request made solely because you changed your mind will ordinarily not be accepted. The advance will generally not be refunded after production begins, subject to applicable consumer protection laws.</p>
+    <p>If we cannot fulfil the agreed customization, or the finished product is defective or materially different from what was agreed, you may still be entitled to a remedy. See the <a href="#customized">Customized Product Policy</a> and the <a href="#returns">Return &amp; Refund Policy</a>.</p>
+  </div>
+
+  <h3 class="plain">C. After dispatch has begun</h3>
+  <div class="indent">
+    <p>Once the dispatch process has started, ordinary cancellation requests will not be accepted. This does not affect your remedies if the product is damaged, defective, incorrect, materially different from what was agreed, lost, or not delivered. Please see the <a href="#returns">Return &amp; Refund Policy</a>.</p>
+    <p>For the purposes of this policy, the dispatch process begins when we start packing the order for handover to India Post.</p>
+  </div>
+
+  <h3>Cancellation by us</h3>
+  <p>If we are unable to fulfil an order (for example, because an item is unavailable), we will inform you on WhatsApp and arrange an appropriate remedy, which may include a refund of the amount you have paid for that order.</p>
+
+  <h3>Your legal rights</h3>
+  <p>Nothing in this policy removes or limits any consumer right that applies to you under Indian law. These restrictions do not apply to the extent that the law gives you a right to a remedy.</p>
+</article>
+
+<!-- ============ 6. RETURNS ============ -->
+<article class="policy" id="returns" data-title="Return &amp; Refund Policy">
+  <header class="policy-head">
+    <p class="kicker">Page 6 of 12</p>
+    <h2 tabindex="-1">Return &amp; Refund Policy</h2>
+  </header>
+
+  <aside class="note">
+    <i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
+    <div><strong>Your consumer rights are protected</strong>
+    <p>This policy does not remove any right you have under applicable Indian consumer protection law, including for defective, incorrect, or materially misdescribed products and for orders that are not delivered.</p></div>
+  </aside>
+
+  <h3>Our care with your order</h3>
+  <p>Our handmade products are prepared and packed with care. If something is not right when your order arrives, please tell us.</p>
+
+  <h3>When to contact us</h3>
+  <p>Please contact us on WhatsApp as soon as reasonably possible if you receive:</p>
+  <ul>
+    <li>A damaged product</li>
+    <li>A defective product</li>
+    <li>An incorrect product</li>
+    <li>A product that is materially different from the agreed description or customization</li>
+    <li>An order that has not been delivered</li>
+  </ul>
+
+  <h3>Photographs or video</h3>
+  <p>To help us look into your complaint, we may ask for photographs, pictures of the packaging, or an unboxing video. These help our investigation, but they are not an absolute legal condition for every valid complaint. If you do not have such evidence, please still contact us and we will review your complaint fairly.</p>
+
+  <h3>How we review a complaint</h3>
+  <p>We will acknowledge your message, look at the order details and any evidence, and tell you our decision on WhatsApp. Depending on the case, a remedy may include a replacement, repair, or a refund. We will handle your complaint consistently with applicable law.</p>
+
+  <h3>Change-of-mind returns</h3>
+  <p>For ready-made products, a return because you changed your mind is not guaranteed. We will consider such a request on the conditions disclosed here and as permitted by applicable law. Where we agree to it, the product must be unused, in its original condition and packaging, and the request must be made within <span class="ph">[return request period, to be set by the business]</span>.</p>
+
+  <h3>Customized products</h3>
+  <p>Customized products are generally not eligible for cancellation or a change-of-mind return once production begins. However, the fact that a product is customized does not remove your legal remedies if it is defective, incorrectly supplied, materially different from what was agreed, or not delivered.</p>
+
+  <h3>Refunds: approval and payment</h3>
+  <p>When a refund is approved, we will tell you the refund amount on WhatsApp. Refunds will generally be made through an appropriate payment method, such as the method you used to pay or another method we agree with you, after verification and subject to applicable requirements. The refund processing period is <span class="ph">[refund processing period, if the business wishes to state one]</span>.</p>
+
+  <h3>Delivery and return-shipping charges</h3>
+  <ul>
+    <li><strong>Our error or a valid complaint</strong> (damaged, defective, incorrect, or materially different product): we will bear the reasonable cost of returning the item or sending a replacement, and the delivery charges you paid for the affected order will be considered in any refund.</li>
+    <li><strong>Approved change-of-mind return:</strong> the customer will generally bear the return-shipping cost, and the original delivery charges are generally not refunded, unless the law requires otherwise.</li>
+  </ul>
+  <p>These points never limit a remedy that applicable consumer law gives you.</p>
+
+  <h3>Lost or not-delivered orders</h3>
+  <p>If your order has not reached you, please message us on WhatsApp with your order details and tracking number (if available). We will help track the shipment with India Post. If the order is found to be lost or not delivered and this is not due to the customer, we will offer an appropriate remedy, such as sending the order again or a refund, in line with applicable law.</p>
+</article>
+
+<!-- ============ 7. CUSTOMIZED ============ -->
+<article class="policy" id="customized" data-title="Customized Product Policy">
+  <header class="policy-head">
+    <p class="kicker">Page 7 of 12</p>
+    <h2 tabindex="-1">Customized Product Policy</h2>
+  </header>
+
+  <aside class="note">
+    <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+    <div><strong>50% advance before production</strong>
+    <p>Customized orders require a 50% advance payment before production begins. The advance is part of the agreed product price, not an extra charge.</p></div>
+  </aside>
+
+  <h3>Customized orders</h3>
+  <p>You may request customized handmade products through Instagram, WhatsApp, or our official website. Customized products are made according to the specifications that you and we agree on. Not every requested customization can be accepted, and we will tell you if we cannot accept your request.</p>
+
+  <h3>What must be agreed before production</h3>
+  <p>Before production begins, we will agree with you on:</p>
+  <ul>
+    <li>Design</li>
+    <li>Colour</li>
+    <li>Size</li>
+    <li>Quantity</li>
+    <li>Price</li>
+    <li>Customization details, such as any personalized text</li>
+    <li>Delivery requirements</li>
+  </ul>
+  <p>Please approve the final specifications carefully, including spellings and colours, before production starts. Order confirmation is done on WhatsApp.</p>
+
+  <h3>50% advance payment</h3>
+  <p>A 50% advance payment of the agreed product price is mandatory before customization work begins. We start production only after we have received and verified the advance and the agreed specifications are confirmed.</p>
+
+  <h3>The advance is not an extra fee</h3>
+  <p>The 50% advance is the first part of the total agreed product price. It is not charged in addition to the product price.</p>
+
+  <h3>Payment before dispatch</h3>
+  <p>The remaining 50% of the product price and all applicable India Post delivery charges must be paid before dispatch. All applicable delivery charges must be paid by the customer and are separate from the product price.</p>
+
+  <h3>Example (for illustration only)</h3>
+  <div class="table-wrap">
+    <table>
+      <caption>Illustrative example of a customized order</caption>
+      <tbody>
+        <tr><th scope="row">Agreed customized product price</th><td>₹1,000</td></tr>
+        <tr><th scope="row">Required 50% advance</th><td>₹500</td></tr>
+        <tr><th scope="row">Remaining product balance</th><td>₹500</td></tr>
+        <tr><th scope="row">India Post delivery charge</th><td>₹80</td></tr>
+        <tr class="total"><th scope="row">Total order value</th><td>₹1,080</td></tr>
+        <tr class="hl"><th scope="row">Payable before production</th><td>₹500</td></tr>
+        <tr class="hl"><th scope="row">Payable before dispatch</th><td>₹580</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>These figures are only an illustrative example. Actual prices and delivery charges depend on the specific order.</p>
+
+  <h3>Cancellation and refunds after production begins</h3>
+  <p>Once production has started, requests to cancel or for a refund solely because of a change of mind will ordinarily not be accepted, subject to applicable consumer protection laws. See also the <a href="#cancellation">Cancellation Policy</a>.</p>
+
+  <h3>Handmade variations</h3>
+  <p>Because customized products are handmade, minor variations in colour, texture, shape, size, and finishing may occur. We will make reasonable efforts to match the design you approved. See the <a href="#handmade">Handmade Product Disclaimer</a>.</p>
+
+  <h3>If we cannot fulfil the agreed customization</h3>
+  <p>If we are unable to fulfil the agreed specifications, we will inform you and consider appropriate remedies under applicable law, which may include a refund of the amount paid. If the finished product is defective or materially different from what was agreed, your remedies under the <a href="#returns">Return &amp; Refund Policy</a> and the law apply.</p>
+
+  <h3>Charges and timelines</h3>
+  <p>Any customization charges and the expected production time will be told to you for your specific order before you confirm. Nothing on this page is a fixed fee or a guaranteed timeline.</p>
+</article>
+
+<!-- ============ 8. PRIVACY ============ -->
+<article class="policy" id="privacy" data-title="Privacy Policy">
+  <header class="policy-head">
+    <p class="kicker">Page 8 of 12</p>
+    <h2 tabindex="-1">Privacy Policy</h2>
+  </header>
+
+  <aside class="note">
+    <i class="fa-solid fa-user-check" aria-hidden="true"></i>
+    <div><strong>No separate app login required</strong>
+    <p>You do not need to create an account or log in to a separate application to place an order with us.</p></div>
+  </aside>
+
+  <p>We respect your privacy. This policy explains what personal information we collect when you order from RàíKrísh's Collection, why we collect it, and how we handle it.</p>
+
+  <h3>No mandatory login</h3>
+  <p>Customers do not need to register or log in to a separate application to place an order. We collect only the details needed to handle your order.</p>
+
+  <h3>Information we may collect</h3>
+  <p>Placing and delivering an order involves some personal information. We may collect:</p>
+  <ul>
+    <li>Your name</li>
+    <li>Your contact number</li>
+    <li>Your delivery address and PIN code</li>
+    <li>Your email address, if you choose to give it</li>
+    <li>Product and order information</li>
+    <li>Customization instructions</li>
+    <li>Payment status and necessary payment references</li>
+    <li>Your communications with us for customer support</li>
+  </ul>
+
+  <h3>Why we use your information</h3>
+  <p>We may use your information for:</p>
+  <ul>
+    <li>WhatsApp order confirmation</li>
+    <li>Order processing</li>
+    <li>Payment verification</li>
+    <li>Preparing invoices</li>
+    <li>Shipping through India Post</li>
+    <li>Shipment tracking</li>
+    <li>Customer support</li>
+    <li>Complaint resolution</li>
+    <li>Keeping the business records we need</li>
+    <li>Complying with applicable law</li>
+  </ul>
+
+  <h3>Sharing your information</h3>
+  <p>We do not sell your information to unrelated third parties for their independent marketing purposes.</p>
+  <p>We may share information only where reasonably necessary, with:</p>
+  <ul>
+    <li><strong>India Post,</strong> to ship and deliver your order</li>
+    <li><strong>Payment service providers,</strong> to process or verify payments</li>
+    <li><strong>Website or technology providers,</strong> where needed to operate our ordering system</li>
+    <li><strong>Authorities or other persons,</strong> where the law requires or permits it</li>
+  </ul>
+  <p>We do not claim that your information is never shared with any third party, because some sharing is needed to deliver your order.</p>
+
+  <h3>Security</h3>
+  <p>We take reasonable technical and organizational measures to protect your information against unauthorized access, disclosure, alteration, loss, or misuse. No method of storing or sending information is completely secure, so we cannot guarantee absolute security.</p>
+
+  <h3>How long we keep information</h3>
+  <p>We keep your information only for as long as reasonably necessary for order fulfilment, customer support, legitimate business records, and our legal obligations.</p>
+
+  <h3>Your questions and requests</h3>
+  <p>If you have a question about this policy, or want to ask about the information we hold about you, please contact us:</p>
+  <ul>
+    <li>WhatsApp: <a href="https://wa.me/917602268369">+91 76022 68369</a></li>
+    <li>Email: <a href="mailto:raikrishscreation@gmail.com">raikrishscreation@gmail.com</a></li>
+  </ul>
+  <p>Please include your name and order details so that we can find the relevant information. We will respond to your request as required by applicable law.</p>
+
+  <h3>Legal requirements</h3>
+  <p>This policy is written with regard to Indian law on consumer protection and personal data, including the Digital Personal Data Protection Act, 2023 and the rules under it, to the extent that they are in force and apply to our business. Parts of that law are being brought into force in stages. We will review this policy and update it as needed. Publishing this policy does not by itself mean that every legal requirement has been met.</p>
+
+  <h3>Changes to this policy</h3>
+  <p>We may update this policy from time to time. The "Last updated" date at the top of this page shows when the policies were last revised.</p>
+</article>
+
+<!-- ============ 9. TERMS ============ -->
+<article class="policy" id="terms" data-title="Terms &amp; Conditions">
+  <header class="policy-head">
+    <p class="kicker">Page 9 of 12</p>
+    <h2 tabindex="-1">Terms &amp; Conditions</h2>
+  </header>
+
+  <p>By ordering from RàíKrísh's Collection, you agree to these Terms &amp; Conditions together with the other policies on this website. These terms do not take away any right that Indian law gives you as a consumer.</p>
+
+  <h3>Scope of the business</h3>
+  <p>RàíKrísh's Collection is an online store in India that sells handmade jewellery, clay jewellery, handmade hair clips and hairpins, handmade lockets, floral-inspired accessories, and other handcrafted decorative and fashion accessories, including customized products.</p>
+
+  <h3>Ordering channels</h3>
+  <p>Orders may be placed through Instagram, WhatsApp, and our official website. No separate app login is required.</p>
+
+  <h3>WhatsApp order confirmation</h3>
+  <p>Every order must be confirmed through WhatsApp before it is processed. A message on Instagram or a request submitted on the website is not a confirmed order. See the <a href="#order">Order Policy</a>.</p>
+
+  <h3>Product availability</h3>
+  <p>Our products are handmade and may be available in limited quantities. We verify availability before accepting an order.</p>
+
+  <h3>Product pricing</h3>
+  <p>Prices are as communicated to you before you confirm your order. Delivery charges are separate from product prices unless an offer states otherwise. We may update prices for future orders.</p>
+
+  <h3>Online payment requirements</h3>
+  <p>Online payment is mandatory, and Cash on Delivery is not available. Payment must be completed and verified before dispatch. A payment screenshot alone is not final proof of payment. See the <a href="#payment">Payment Policy</a>.</p>
+
+  <h3>Delivery charges</h3>
+  <p>All applicable delivery charges must be paid by the customer. Delivery charges are separate from product prices and will be communicated before order confirmation.</p>
+
+  <h3>Customized products: 50% advance</h3>
+  <p>For customized products, you must pay 50% of the agreed product price in advance before production begins. The advance is part of the agreed price, not an extra charge. See the <a href="#customized">Customized Product Policy</a>.</p>
+
+  <h3>Remaining payment before dispatch</h3>
+  <p>The remaining product balance and the applicable delivery charges must be paid before dispatch. Full payment, including delivery charges, is required before dispatch.</p>
+
+  <h3>Shipping through India Post</h3>
+  <p>All orders are shipped through India Post. Delivery times depend on the destination and postal operations and are not guaranteed. See the <a href="#shipping">Shipping &amp; Delivery Policy</a>.</p>
+
+  <h3>Accurate delivery information</h3>
+  <p>You are responsible for giving a correct name, active contact number, complete delivery address, and PIN code.</p>
+
+  <h3>Handmade product variations</h3>
+  <p>Our products are handmade, so minor variations in colour, shape, size, texture, and finishing may occur. See the <a href="#handmade">Handmade Product Disclaimer</a>. These variations do not excuse significant defects or a product that is materially different from what was agreed.</p>
+
+  <h3>Cancellation and refund rules</h3>
+  <p>Cancellation may be considered before dispatch begins. Ordinary cancellation is not accepted once dispatch has begun, and change-of-mind cancellation is generally not accepted after customized production begins, subject to applicable law. Remedies for damaged, defective, incorrect, materially different, lost, or undelivered products are described in the <a href="#cancellation">Cancellation Policy</a> and the <a href="#returns">Return &amp; Refund Policy</a>.</p>
+
+  <h3>Privacy</h3>
+  <p>We collect and use personal information as described in our <a href="#privacy">Privacy Policy</a>.</p>
+
+  <h3>Intellectual property</h3>
+  <p>Where applicable, the product photographs, designs, logos, and website content of RàíKrísh's Collection belong to the business or are used with permission. Please do not copy, reproduce, or use them for commercial purposes without our written permission.</p>
+
+  <h3>Customer support and complaints</h3>
+  <p>You can contact us about orders, questions, or complaints through the channels on our <a href="#contact">Contact &amp; Complaint Policy</a> page.</p>
+
+  <h3>Applicable law</h3>
+  <p>These terms and your use of this website and our services are governed by the laws of India.</p>
+
+  <h3>Mandatory consumer rights</h3>
+  <p>Nothing in these terms or in any other policy on this website excludes or limits any right or remedy that you have under applicable Indian consumer protection law and that cannot lawfully be excluded. If any term conflicts with such a right, your legal right prevails.</p>
+</article>
+
+<!-- ============ 10. HANDMADE DISCLAIMER ============ -->
+<article class="policy" id="handmade" data-title="Handmade Product Disclaimer">
+  <header class="policy-head">
+    <p class="kicker">Page 10 of 12</p>
+    <h2 tabindex="-1">Handmade Product Disclaimer</h2>
+  </header>
+
+  <h3>Handmade, not mass-produced</h3>
+  <p>Our products are handmade rather than mass-produced. Each piece is made individually, and this is part of what gives it character.</p>
+
+  <h3>Minor variations are normal</h3>
+  <p>Minor differences in colour, shape, size, texture, and finishing may occur from one piece to another, and between a piece and its photograph. These small differences are a natural part of handmade work.</p>
+
+  <h3>Photographs and screens</h3>
+  <p>Product photographs may look slightly different from the actual product because of lighting, camera settings, and the display settings of your screen.</p>
+
+  <h3>Our effort to be accurate</h3>
+  <p>We make reasonable efforts to provide accurate product descriptions and photographs.</p>
+
+  <h3>Please review product details</h3>
+  <p>Before buying, please read the available product information, including materials, dimensions, and care instructions, and ask us on WhatsApp if anything is unclear.</p>
+
+  <h3>Limits of this disclaimer</h3>
+  <p>The handmade nature of our products does not excuse significant defects, a materially misleading description, or failure to supply the product that was agreed. If you receive such a product, please see the <a href="#returns">Return &amp; Refund Policy</a>. Your rights under applicable law are not affected.</p>
+</article>
+
+<!-- ============ 11. PRODUCT CARE ============ -->
+<article class="policy" id="care" data-title="Product Care Policy">
+  <header class="policy-head">
+    <p class="kicker">Page 11 of 12</p>
+    <h2 tabindex="-1">Product Care Policy</h2>
+  </header>
+
+  <p>With good care, your handmade pieces will stay beautiful for longer. These are general guidelines for our jewellery, clay accessories, hair clips, lockets, and other handcrafted items. Please follow any product-specific care instructions we give you, as they take priority.</p>
+
+  <aside class="note gold">
+    <i class="fa-solid fa-child-reaching" aria-hidden="true"></i>
+    <div><strong>Small parts and children</strong>
+    <p>Some pieces have small components that may be a choking hazard. Please keep them away from young children.</p></div>
+  </aside>
+
+  <h3>Keep products dry</h3>
+  <p>Avoid water where the materials are not water-resistant. Remove jewellery before bathing, swimming, washing, or exercising, and wipe it gently with a dry soft cloth if it gets damp.</p>
+
+  <h3>Handle gently</h3>
+  <p>Avoid dropping, bending, pulling, or pressing the products with excessive force. Clay and other handmade materials can chip, crack, or break.</p>
+
+  <h3>Avoid chemicals and heat</h3>
+  <p>Keep products away from perfume, hair spray, lotions, cleaning products, and other chemicals. Where appropriate for the material, also keep them away from excessive heat and direct sunlight for long periods.</p>
+
+  <h3>Wear them last</h3>
+  <p>Put on your jewellery after applying makeup, perfume, and hair products.</p>
+
+  <h3>Store carefully</h3>
+  <p>Store each piece separately in a soft pouch, cloth, or box so that pieces do not rub, scratch, or knock against each other.</p>
+
+  <h3>Hair clips and hairpins</h3>
+  <p>Use hair clips and hairpins gently and avoid forcing them onto very thick hair, as this may damage the clip or the decoration.</p>
+
+  <h3>Follow product-specific instructions</h3>
+  <p>If we give care instructions for a particular product, please follow them.</p>
+
+  <h3>Skin sensitivity</h3>
+  <p>People's skin reacts differently to different materials. We do not claim that every product is waterproof, hypoallergenic, tarnish-proof, or suitable for every skin type. If you have sensitive skin, please ask us about the materials used before you buy, and stop wearing a piece if it irritates your skin.</p>
+</article>
+
+<!-- ============ 12. CONTACT ============ -->
+<article class="policy" id="contact" data-title="Contact &amp; Complaint Policy">
+  <header class="policy-head">
+    <p class="kicker">Page 12 of 12</p>
+    <h2 tabindex="-1">Contact &amp; Complaint Policy</h2>
+  </header>
+
+  <aside class="note">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    <div><strong>WhatsApp is our primary channel</strong>
+    <p>We confirm orders on WhatsApp. It is also the quickest way to reach us about an order.</p></div>
+  </aside>
+
+  <h3>Contact us</h3>
+  <p>For order-related questions and complaints, please use our officially published contact details:</p>
+  <div class="contact-grid">
+    <div class="contact-card"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><div><strong>WhatsApp</strong><a href="https://wa.me/917602268369">+91 76022 68369</a></div></div>
+    <div class="contact-card"><i class="fa-solid fa-envelope" aria-hidden="true"></i><div><strong>Customer service email</strong><a href="mailto:raikrishscreation@gmail.com">raikrishscreation@gmail.com</a></div></div>
+    <div class="contact-card"><i class="fa-brands fa-instagram" aria-hidden="true"></i><div><strong>Instagram</strong><span>@raikrishs_creation</span></div></div>
+    <div class="contact-card"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><div><strong>Business correspondence address</strong><span class="ph">[Address, if applicable]</span></div></div>
+  </div>
+
+  <h3>Grievance contact</h3>
+  <p>Where Indian law requires us to name a grievance officer or contact person, the details are:</p>
+  <div class="contact-grid">
+    <div class="contact-card"><i class="fa-solid fa-user-shield" aria-hidden="true"></i><div><strong>Name and designation</strong><span class="ph">[Grievance contact name, where required]</span></div></div>
+    <div class="contact-card"><i class="fa-solid fa-at" aria-hidden="true"></i><div><strong>Contact details</strong><span class="ph">[Grievance email / WhatsApp, where required]</span></div></div>
+  </div>
+
+  <h3>What to include in your complaint</h3>
+  <p>To help us look into your complaint quickly, please send:</p>
+  <ul>
+    <li>Your name and the contact number used for the order</li>
+    <li>Your order reference or order ID</li>
+    <li>A clear description of the issue</li>
+    <li>Relevant photographs, packaging images, or a video, if you have them</li>
+    <li>The tracking number, for delivery issues</li>
+    <li>What outcome you are asking for</li>
+  </ul>
+  <p>If you do not have every item, please still contact us. Missing evidence does not by itself stop us from reviewing a valid complaint.</p>
+
+  <h3>How we handle complaints</h3>
+  <p>We will acknowledge your complaint and review it within a reasonable period, and we will tell you the outcome on WhatsApp or by email. Where applicable law sets a time limit for responding, we will follow it. If we need more information, we will ask you.</p>
+
+  <h3>If you are not satisfied</h3>
+  <p>If you feel that your complaint has not been resolved, you may also approach the appropriate consumer authorities, such as the National Consumer Helpline, or any other forum that applicable law makes available to you. Your legal rights are not affected by anything on this website.</p>
+
+  <h3>Related policies</h3>
+  <p>For details on remedies, see the <a href="#returns">Return &amp; Refund Policy</a>, the <a href="#shipping">Shipping &amp; Delivery Policy</a>, and the <a href="#privacy">Privacy Policy</a>.</p>
+</article>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="foot-brand">RàíKrísh's Collection</p>
+        <p class="foot-desc">Handmade jewellery, clay jewellery, and handcrafted accessories, made with care and shipped across India through India Post.</p>
+        <ul class="foot-contact">
+          <li><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><a href="https://wa.me/917602268369">WhatsApp: +91 76022 68369</a></li>
+          <li><i class="fa-brands fa-instagram" aria-hidden="true"></i><span>Instagram: @raikrishs_creation</span></li>
+          <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:raikrishscreation@gmail.com">raikrishscreation@gmail.com</a></li>
+        </ul>
+      </div>
+      <nav aria-label="Customer support">
+        <h2>Customer support</h2>
+        <ul>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#order">Order Policy</a></li>
+          <li><a href="#payment">Payment Policy</a></li>
+          <li><a href="#shipping">Shipping &amp; Delivery</a></li>
+          <li><a href="#cancellation">Cancellation Policy</a></li>
+          <li><a href="#returns">Return &amp; Refund Policy</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Legal">
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms &amp; Conditions</a></li>
+          <li><a href="#customized">Customized Product Policy</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Product information and shop">
+        <h2>Product information</h2>
+        <ul>
+          <li><a href="#handmade">Handmade Product Disclaimer</a></li>
+          <li><a href="#care">Product Care Policy</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="https://raikrishcolection.arnetworkhouse.in/">Shop all products</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© <span id="year">2026</span> RàíKrísh's Collection. All rights reserved.</p>
+      <p class="foot-note">Support handmade, support small business</p>
+      <p>Associated with <a href="https://arnetworkhouse.in/" target="_blank" rel="noopener">AR Network House</a></p>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+
+<script>
+(function () {
+  'use strict';
+  var body = document.body;
+  var sections = [].slice.call(document.querySelectorAll('.policy'));
+  var navLinks = [].slice.call(document.querySelectorAll('.policy-nav a'));
+  var ids = sections.map(function (s) { return s.id; });
+  var menuBtn = document.getElementById('menuBtn');
+  var toTop = document.getElementById('toTop');
+  var content = document.getElementById('content');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var baseTitle = "Policies | RàíKrísh's Collection";
+
+  /* Current year */
+  var yearEl = document.getElementById('year');
+  if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
+
+  /* Logo fallback if the image cannot load */
+  var logo = document.getElementById('brandLogo');
+  var fallback = document.getElementById('brandFallback');
+  if (logo && fallback) {
+    logo.addEventListener('error', function () {
+      logo.style.display = 'none';
+      fallback.style.display = 'flex';
+    });
+  }
+
+  /* Previous / next links at the bottom of each policy */
+  sections.forEach(function (sec, i) {
+    var pager = document.createElement('nav');
+    pager.className = 'pager';
+    pager.setAttribute('aria-label', 'Previous and next policy');
+    if (i > 0) {
+      var p = document.createElement('a');
+      p.href = '#' + sections[i - 1].id;
+      p.className = 'prev';
+      p.textContent = '\u2190 ' + sections[i - 1].getAttribute('data-title');
+      pager.appendChild(p);
+    }
+    if (i < sections.length - 1) {
+      var n = document.createElement('a');
+      n.href = '#' + sections[i + 1].id;
+      n.className = 'next';
+      n.textContent = sections[i + 1].getAttribute('data-title') + ' \u2192';
+      pager.appendChild(n);
+    }
+    sec.appendChild(pager);
+  });
+
+  /* Menu (mobile) */
+  function setMenu(open) {
+    body.classList.toggle('menu-open', open);
+    if (menuBtn) {
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.setAttribute('aria-label', open ? 'Close policy menu' : 'Open policy menu');
+      var icon = menuBtn.querySelector('i');
+      if (icon) { icon.className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'; }
+    }
+  }
+  if (menuBtn) {
+    menuBtn.addEventListener('click', function () {
+      setMenu(!body.classList.contains('menu-open'));
+    });
+  }
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && body.classList.contains('menu-open')) {
+      setMenu(false);
+      if (menuBtn) { menuBtn.focus(); }
+    }
+  });
+  window.addEventListener('resize', function () {
+    if (window.innerWidth >= 960) { setMenu(false); }
+  });
+
+  /* Show one policy at a time */
+  function show(id, scroll) {
+    if (ids.indexOf(id) === -1) { id = ids[0]; }
+    var current = null;
+    sections.forEach(function (sec) {
+      var on = sec.id === id;
+      sec.classList.toggle('active', on);
+      if (on) { current = sec; }
+    });
+    navLinks.forEach(function (a) {
+      if (a.getAttribute('href') === '#' + id) {
+        a.setAttribute('aria-current', 'page');
+      } else {
+        a.removeAttribute('aria-current');
+      }
+    });
+    document.title = current.getAttribute('data-title') + ' | RàíKrísh\'s Collection';
+    if (scroll) {
+      var top = content.getBoundingClientRect().top + window.pageYOffset - (parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'), 10) || 68) - 12;
+      window.scrollTo({ top: Math.max(top, 0), behavior: reduce ? 'auto' : 'smooth' });
+      var h = current.querySelector('h2');
+      if (h) { try { h.focus({ preventScroll: true }); } catch (err) { h.focus(); } }
+    }
+  }
+
+  function route(scroll) {
+    var id = (location.hash || '').replace('#', '');
+    if (id === 'top' || id === 'content') { id = ''; }
+    show(id, scroll);
+  }
+
+  /* Close the mobile menu when a policy link is chosen */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if (!a) { return; }
+    var id = a.getAttribute('href').slice(1);
+    if (ids.indexOf(id) === -1) { return; }
+    setMenu(false);
+    if (location.hash === '#' + id) {
+      e.preventDefault();
+      show(id, true);
+    }
+  });
+
+  window.addEventListener('hashchange', function () { route(true); });
+  route(!!location.hash);
+
+  /* Back to top */
+  window.addEventListener('scroll', function () {
+    toTop.classList.toggle('show', window.pageYOffset > 400);
+  }, { passive: true });
+  toTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    var skip = document.querySelector('.skip');
+    if (skip) { skip.focus(); skip.blur(); }
+  });
+})();
+</script>
+</body>
+</html>
