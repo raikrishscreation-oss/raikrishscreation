@@ -128,11 +128,12 @@ h2{font-family:var(--serif);font-size:clamp(1.7rem,3.6vw,2.4rem);margin:0 0 6px;
 /* footer */
 footer{background:var(--green-deep);color:var(--gold-soft);padding:44px 0 24px;border-top:3px solid var(--gold)}
 .contact{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.contact > div{text-align:center}
 .contact h3{font-family:var(--serif);margin:0 0 6px;color:#fff;font-size:1.05rem}
 .contact a{text-decoration:none;font-size:1.05rem}
 .contact a:not(.ibtn):hover{color:#fff;text-decoration:underline}
-.contact small{display:block;opacity:.8}
-.ibtn{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--green);border:1.5px solid var(--gold);color:var(--gold);font-size:1.2rem;margin:4px 8px 8px 0;transition:background .2s,color .2s,transform .2s}
+.contact small{display:block;opacity:.8;text-align:center}
+.ibtn{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--green);border:1.5px solid var(--gold);color:var(--gold);font-size:1.2rem;margin:4px 6px 8px;transition:background .2s,color .2s,transform .2s}
 .ibtn:hover{background:var(--gold);color:var(--green-deep);transform:translateY(-3px)}
 .tag{margin:32px 0 0;text-align:center;font-family:var(--script);font-size:1.4rem;color:var(--gold)}
 .copy{text-align:center;opacity:.7;font-size:.85rem;margin:6px 0 0}
@@ -264,19 +265,16 @@ dialog::backdrop{background:rgba(10,53,36,.6)}
         <h3>Mobile</h3>
         <a class="ibtn" id="phoneLink" href="#" aria-label="Call us"><i class="fa-solid fa-phone"></i></a>
         <a class="ibtn" id="waBtn" href="#" target="_blank" rel="noopener" aria-label="WhatsApp us"><i class="fa-brands fa-whatsapp"></i></a>
-        <small id="phoneTxt"></small>
         <small>Call / WhatsApp available</small>
       </div>
       <div>
         <h3>Instagram</h3>
         <a class="ibtn" id="igLink" href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <small id="igTxt"></small>
         <small>Follow for latest designs</small>
       </div>
       <div>
         <h3>Email</h3>
         <a class="ibtn" id="mailLink" href="#" aria-label="Email us"><i class="fa-solid fa-envelope"></i></a>
-        <small id="mailTxt"></small>
         <small>Drop us a mail</small>
       </div>
     </div>
@@ -382,10 +380,10 @@ window.addEventListener('popstate', () => {
 /* ====== STATIC BITS ====== */
 document.querySelectorAll('.logo').forEach(i => { i.src = CONFIG.LOGO_URL; });
 $('#waHero').href = `https://wa.me/${CONFIG.WHATSAPP}?text=${encodeURIComponent("Hi RaiKrish's Collection, I'd like to know more about your jewellery.")}`;
-$('#phoneLink').href = 'tel:+91' + CONFIG.PHONE;   $('#phoneTxt').textContent = CONFIG.PHONE;
+$('#phoneLink').href = 'tel:+91' + CONFIG.PHONE;
 $('#waBtn').href = `https://wa.me/${CONFIG.WHATSAPP}`;
-$('#igLink').href = 'https://instagram.com/' + CONFIG.INSTAGRAM;   $('#igTxt').textContent = '@' + CONFIG.INSTAGRAM;
-$('#mailLink').href = 'mailto:' + CONFIG.EMAIL;    $('#mailTxt').textContent = CONFIG.EMAIL;
+$('#igLink').href = 'https://instagram.com/' + CONFIG.INSTAGRAM;
+$('#mailLink').href = 'mailto:' + CONFIG.EMAIL;
 $('#yr').textContent = new Date().getFullYear();
 
 /* ====== PRODUCTS ====== */
