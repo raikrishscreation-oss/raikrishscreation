@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b3d29">
+<title>Feedback – RaiKrish's Collection</title>
+<meta name="description" content="Share your experience with RaiKrish's Collection – handmade clay jewellery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --green:#0b3d29;
+    --green-2:#14573b;
+    --gold:#c9a24a;
+    --cream:#fbf6e9;
+    --paper:#fffdf7;
+    --ink:#1f2a24;
+    --muted:#667068;
+    --line:#e6dcc3;
+    --danger:#b3261e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Poppins',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    min-height:100vh;
+    display:flex;flex-direction:column;
+    line-height:1.6;
+  }
+  a{color:inherit}
+
+  /* Header */
+  .top{
+    background:var(--green);
+    color:#fff;
+    position:sticky;top:0;z-index:20;
+    box-shadow:0 2px 10px rgba(0,0,0,.18);
+  }
+  .top .in{
+    max-width:1100px;margin:0 auto;padding:10px 18px;
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+  }
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .logo{
+    width:46px;height:46px;border-radius:50%;
+    object-fit:cover;background:#fff;
+    border:2px solid var(--gold);
+    flex:0 0 auto;
+  }
+  .brand span{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;letter-spacing:.2px}
+  .top .back{
+    font-size:.88rem;text-decoration:none;color:#fff;
+    padding:8px 14px;border:1px solid rgba(255,255,255,.35);border-radius:999px;
+    transition:background .2s;
+    white-space:nowrap;
+  }
+  .top .back:hover{background:rgba(255,255,255,.12)}
+
+  /* Hero */
+  .hero{
+    background:linear-gradient(180deg,var(--green) 0%,var(--green-2) 100%);
+    color:#fff;text-align:center;
+    padding:34px 20px 90px;
+  }
+  .hero .logo-lg{
+    width:112px;height:112px;border-radius:50%;
+    object-fit:cover;background:#fff;
+    border:4px solid var(--gold);
+    box-shadow:0 8px 24px rgba(0,0,0,.28);
+    margin-bottom:16px;
+  }
+  .hero small{display:block;color:var(--gold);font-weight:500;margin-bottom:6px}
+  .hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,5vw,2.5rem);line-height:1.2;margin-bottom:10px}
+  .hero p{max-width:480px;margin:0 auto;color:#dfeee6;font-size:.95rem}
+
+  /* Card */
+  main{flex:1;padding:0 16px 40px}
+  .card{
+    max-width:560px;margin:-60px auto 0;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:28px 24px 26px;
+    box-shadow:0 14px 40px rgba(11,61,41,.14);
+    position:relative;
+  }
+  .field{margin-bottom:20px}
+  label.lbl,.lbl{
+    display:block;font-weight:500;font-size:.92rem;margin-bottom:7px;color:var(--green);
+  }
+  .lbl em{color:var(--danger);font-style:normal}
+  .lbl .opt{color:var(--muted);font-weight:400;font-size:.8rem}
+  input[type=text],textarea{
+    width:100%;font:inherit;font-size:.95rem;color:var(--ink);
+    background:#fff;border:1.5px solid var(--line);border-radius:12px;
+    padding:12px 14px;outline:none;
+    transition:border-color .2s,box-shadow .2s;
+  }
+  textarea{resize:vertical;min-height:110px}
+  input:focus,textarea:focus{border-color:var(--green-2);box-shadow:0 0 0 3px rgba(20,87,59,.15)}
+  .invalid input,.invalid .rate{border-color:var(--danger)}
+  .err{display:none;color:var(--danger);font-size:.8rem;margin-top:6px}
+  .invalid .err{display:block}
+
+  /* Emoji rating */
+  .rate{
+    display:flex;justify-content:space-between;gap:6px;
+    padding:6px;border:1.5px solid transparent;border-radius:14px;
+  }
+  .rate button{
+    flex:1;background:#fff;border:1.5px solid var(--line);border-radius:14px;
+    padding:10px 0 8px;cursor:pointer;font:inherit;
+    display:flex;flex-direction:column;align-items:center;gap:2px;
+    transition:transform .15s,border-color .2s,background .2s,box-shadow .2s;
+  }
+  .rate button .e{font-size:2rem;line-height:1.15;filter:grayscale(.85) opacity(.7);transition:filter .2s,transform .2s}
+  .rate button .n{font-size:.72rem;color:var(--muted)}
+  .rate button:hover .e{filter:none}
+  .rate button:focus-visible{outline:3px solid rgba(201,162,74,.6);outline-offset:2px}
+  .rate button.on{
+    border-color:var(--gold);background:#fff8e3;
+    box-shadow:0 4px 14px rgba(201,162,74,.35);
+    transform:translateY(-3px);
+  }
+  .rate button.on .e{filter:none;transform:scale(1.18)}
+  .rate button.on .n{color:var(--green);font-weight:600}
+
+  .reply{
+    display:none;margin-top:12px;
+    background:#eef6f1;border-left:4px solid var(--green-2);
+    border-radius:10px;padding:12px 14px;font-size:.9rem;color:var(--green);
+  }
+  .reply.show{display:block;animation:pop .3s ease}
+  @keyframes pop{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+
+  .hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+
+  .btn{
+    width:100%;border:0;cursor:pointer;font:inherit;font-weight:600;font-size:1rem;
+    color:#fff;background:var(--green);
+    padding:14px 18px;border-radius:999px;
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    transition:background .2s,transform .1s;
+  }
+  .btn:hover{background:var(--green-2)}
+  .btn:active{transform:scale(.99)}
+  .btn:disabled{opacity:.65;cursor:not-allowed}
+  .btn.gold{background:var(--gold);color:#2b2208}
+  .btn.gold:hover{background:#b9923c}
+  .formerr{display:none;margin-top:12px;text-align:center;color:var(--danger);font-size:.88rem}
+
+  /* Thank you */
+  .thanks{display:none;text-align:center;padding:10px 0 4px}
+  .thanks .big{font-size:4rem;line-height:1.1;margin-bottom:8px}
+  .thanks h2{font-family:'Playfair Display',serif;color:var(--green);font-size:1.6rem;margin-bottom:10px}
+  .thanks p{color:var(--ink);margin-bottom:20px}
+  .thanks .btn+.btn{margin-top:10px}
+  .card.done form{display:none}
+  .card.done .thanks{display:block}
+
+  /* Footer */
+  footer{
+    background:var(--green);color:#cfe3d8;text-align:center;
+    padding:26px 18px 22px;font-size:.88rem;
+  }
+  footer .tag{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.05rem;margin-bottom:12px}
+  footer .icons{display:flex;justify-content:center;gap:12px;margin-bottom:14px}
+  footer .icons a{
+    width:40px;height:40px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    border:1px solid rgba(255,255,255,.35);color:#fff;text-decoration:none;font-size:1.05rem;
+    transition:background .2s,color .2s,border-color .2s;
+  }
+  footer .icons a:hover{background:var(--gold);color:var(--green);border-color:var(--gold)}
+  footer .links a{color:#fff}
+  footer .links a:hover{color:var(--gold)}
+
+  @media (max-width:480px){
+    .card{padding:22px 16px 20px;border-radius:16px}
+    .rate button .e{font-size:1.65rem}
+    .brand span{font-size:1rem}
+    .top .back span{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="in">
+    <a class="brand" href="https://raikrishcolection.arnetworkhouse.in/">
+      <img class="logo" id="logoSm" alt="RaiKrish's Collection logo">
+      <span>RaiKrish's Collection</span>
+    </a>
+    <a class="back" href="https://raikrishcolection.arnetworkhouse.in/"><i class="fa-solid fa-store"></i> <span>Back to shop</span></a>
+  </div>
+</header>
+
+<section class="hero">
+  <img class="logo-lg" id="logoLg" alt="RaiKrish's Collection – peacock feather and lotus emblem">
+  <small>We'd love to hear from you</small>
+  <h1>Share your experience</h1>
+  <p>Your words help our small handmade business grow. It takes less than a minute.</p>
+</section>
+
+<main>
+  <div class="card" id="card">
+    <form id="form" novalidate autocomplete="off">
+
+      <div class="field" id="fName">
+        <label class="lbl" for="name">Your Name <em>*</em></label>
+        <input type="text" id="name" maxlength="100" placeholder="Enter your name">
+        <div class="err">Please enter your name.</div>
+      </div>
+
+      <div class="field" id="fRate">
+        <span class="lbl">Rate Your Experience <em>*</em></span>
+        <div class="rate" id="rate" role="radiogroup" aria-label="Rate your experience">
+          <button type="button" role="radio" aria-checked="false" data-v="1" aria-label="1 - Very poor"><span class="e">😠</span><span class="n">Very poor</span></button>
+          <button type="button" role="radio" aria-checked="false" data-v="2" aria-label="2 - Poor"><span class="e">😞</span><span class="n">Poor</span></button>
+          <button type="button" role="radio" aria-checked="false" data-v="3" aria-label="3 - Okay"><span class="e">😐</span><span class="n">Okay</span></button>
+          <button type="button" role="radio" aria-checked="false" data-v="4" aria-label="4 - Good"><span class="e">🙂</span><span class="n">Good</span></button>
+          <button type="button" role="radio" aria-checked="false" data-v="5" aria-label="5 - Excellent"><span class="e">😍</span><span class="n">Excellent</span></button>
+        </div>
+        <div class="reply" id="reply" aria-live="polite"></div>
+        <div class="err">Please choose a rating.</div>
+      </div>
+
+      <div class="field">
+        <label class="lbl" for="orderId">Invoice / Order ID <span class="opt">(Optional)</span></label>
+        <input type="text" id="orderId" maxlength="50" placeholder="e.g. RK-261011-003 or RKC26001">
+      </div>
+
+      <div class="field">
+        <label class="lbl" for="message">Message <span class="opt">(Optional)</span></label>
+        <textarea id="message" maxlength="2000" placeholder="Tell us what you liked or what we can improve"></textarea>
+      </div>
+
+      <!-- honeypot -->
+      <input type="text" class="hp" id="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <button class="btn" type="submit" id="submitBtn"><i class="fa-solid fa-paper-plane"></i> Send feedback</button>
+      <div class="formerr" id="formErr"></div>
+    </form>
+
+    <div class="thanks" id="thanks">
+      <div class="big" id="tEmoji">😍</div>
+      <h2>Thank you!</h2>
+      <p id="tMsg"></p>
+      <a class="btn gold" href="https://raikrishcolection.arnetworkhouse.in/"><i class="fa-solid fa-gem"></i> Visit our collection</a>
+      <button class="btn" type="button" id="again"><i class="fa-solid fa-rotate-right"></i> Send another feedback</button>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="tag">Support handmade, support small business</div>
+  <div class="icons">
+    <a href="https://wa.me/917602268369" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/raikrishs_creation" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="mailto:raikrishscreation@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+  </div>
+  <div>© RaiKrish's Collection</div>
+  <div class="links"><a href="https://raikrishcolection.arnetworkhouse.in/POLICY/">Policy</a> &nbsp;|&nbsp; Associated with <a href="https://arnetworkhouse.in/">AR Network House</a></div>
+</footer>
+
+<script>
+(function(){
+  // ====== CONFIG ======
+  // Paste your deployed Apps Script web app URL (ends with /exec)
+  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbydpepB86QLSrIi3x0A-d41cAKus0Uh_eINNk6xJXoAYYWjIy2tlAIR4pRTRT6OMF0/exec';
+  var LOGO = 'https://drive.google.com/thumbnail?id=1zqOu2NPiGQ4MZT6rxNwbzn_7csTxUQpD&sz=s800';
+
+  // Reply message for each rating
+  var MESSAGES = {
+    1: { e:'😠', t:"We're truly sorry your experience was this bad. Please tell us what went wrong so we can make it right." },
+    2: { e:'😞', t:"We're sorry we let you down. Your feedback matters and we will work on fixing this." },
+    3: { e:'😐', t:"Thank you for your feedback. We'll try our best to do better next time." },
+    4: { e:'🙂', t:"Thank you so much! We're glad you liked it and hope to serve you again soon." },
+    5: { e:'😍', t:"Wow, thank you! You made our day. Your love and support keep our handmade dream alive. 💚" }
+  };
+
+  document.getElementById('logoSm').src = LOGO;
+  document.getElementById('logoLg').src = LOGO;
+
+  var rating = 0;
+  var rateBox = document.getElementById('rate');
+  var btns = rateBox.querySelectorAll('button');
+  var reply = document.getElementById('reply');
+  var card = document.getElementById('card');
+  var form = document.getElementById('form');
+  var fName = document.getElementById('fName');
+  var fRate = document.getElementById('fRate');
+  var submitBtn = document.getElementById('submitBtn');
+  var formErr = document.getElementById('formErr');
+
+  function setRating(v){
+    rating = v;
+    btns.forEach(function(b){
+      var on = Number(b.dataset.v) === v;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-checked', on ? 'true' : 'false');
+    });
+    reply.textContent = MESSAGES[v].t;
+    reply.classList.remove('show'); void reply.offsetWidth; reply.classList.add('show');
+    fRate.classList.remove('invalid');
+  }
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){ setRating(Number(b.dataset.v)); });
+  });
+  rateBox.addEventListener('keydown', function(e){
+    if (!rating) return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowUp'){ e.preventDefault(); setRating(Math.min(5, rating+1)); btns[rating-1].focus(); }
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowDown'){ e.preventDefault(); setRating(Math.max(1, rating-1)); btns[rating-1].focus(); }
+  });
+
+  document.getElementById('name').addEventListener('input', function(){ fName.classList.remove('invalid'); });
+
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    formErr.style.display = 'none';
+
+    var name = document.getElementById('name').value.trim();
+    var ok = true;
+    if (!name){ fName.classList.add('invalid'); ok = false; }
+    if (!rating){ fRate.classList.add('invalid'); ok = false; }
+    if (!ok){
+      var first = document.querySelector('.invalid');
+      if (first) first.scrollIntoView({behavior:'smooth', block:'center'});
+      return;
+    }
+
+    if (SCRIPT_URL === 'YOUR_APPS_SCRIPT_WEB_APP_URL'){
+      formErr.textContent = 'Setup incomplete: add the Apps Script URL in index.html.';
+      formErr.style.display = 'block';
+      return;
+    }
+
+    var payload = {
+      name: name,
+      rating: rating,
+      orderId: document.getElementById('orderId').value.trim(),
+      message: document.getElementById('message').value.trim(),
+      website: document.getElementById('website').value
+    };
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(res){
+      if (!res || !res.ok) throw new Error((res && res.error) || 'Failed');
+      document.getElementById('tEmoji').textContent = MESSAGES[rating].e;
+      document.getElementById('tMsg').textContent = MESSAGES[rating].t;
+      card.classList.add('done');
+      window.scrollTo({top:0, behavior:'smooth'});
+    })
+    .catch(function(){
+      formErr.textContent = 'Could not send your feedback. Please check your internet and try again.';
+      formErr.style.display = 'block';
+    })
+    .finally(function(){
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send feedback';
+    });
+  });
+
+  document.getElementById('again').addEventListener('click', function(){
+    form.reset();
+    rating = 0;
+    btns.forEach(function(b){ b.classList.remove('on'); b.setAttribute('aria-checked','false'); });
+    reply.classList.remove('show');
+    card.classList.remove('done');
+  });
+})();
+</script>
+</body>
+</html>
